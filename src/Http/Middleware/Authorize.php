@@ -1,8 +1,8 @@
 <?php
 
-namespace Eminiarts\NovaPermissions\Http\Middleware;
+namespace Baleethai\NovaPermissions\Http\Middleware;
 
-use Eminiarts\NovaPermissions\NovaPermissions;
+use Baleethai\NovaPermissions\NovaPermissions;
 
 class Authorize
 {

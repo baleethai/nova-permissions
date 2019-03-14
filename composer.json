@@ -1,5 +1,5 @@
 {
-    "name": "eminiarts/nova-permissions",
+    "name": "baleethai/nova-permissions",
     "description": "Laravel Nova Grouped Permissions.",
     "keywords": [
         "laravel",
@@ -12,13 +12,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Eminiarts\\NovaPermissions\\": "src/"
+            "Baleethai\\NovaPermissions\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Eminiarts\\NovaPermissions\\ToolServiceProvider"
+                "Baleethai\\NovaPermissions\\ToolServiceProvider"
             ]
         }
     },

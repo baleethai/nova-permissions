@@ -31,7 +31,7 @@ composer require eminiarts/nova-permissions
 Publish the Migration with the following command:
 
 ```bash
-php artisan vendor:publish --provider="Eminiarts\NovaPermissions\ToolServiceProvider" --tag="migrations"
+php artisan vendor:publish --provider="Baleethai\NovaPermissions\ToolServiceProvider" --tag="migrations"
 ```
 
 Migrate the Database:
@@ -51,7 +51,7 @@ public function tools()
 {
     return [
         // ...
-        \Eminiarts\NovaPermissions\NovaPermissions(),
+        \Baleethai\NovaPermissions\NovaPermissions(),
     ];
 }
 ```
@@ -66,8 +66,8 @@ public function fields(Request $request)
 {
     return [
         // ...
-        MorphToMany::make('Roles', 'roles', \Eminiarts\NovaPermissions\Nova\Role::class),
-        MorphToMany::make('Permissions', 'permissions', \Eminiarts\NovaPermissions\Nova\Permission::class),
+        MorphToMany::make('Roles', 'roles', \Baleethai\NovaPermissions\Nova\Role::class),
+        MorphToMany::make('Permissions', 'permissions', \Baleethai\NovaPermissions\Nova\Permission::class),
     ];
 }
 ```
@@ -90,7 +90,7 @@ A new menu item called **Permissions & Roles** will appear in your Nova app afte
 Publish our Seeder with the following command:
 
 ```
-php artisan vendor:publish --provider="Eminiarts\NovaPermissions\ToolServiceProvider" --tag="seeds"
+php artisan vendor:publish --provider="Baleethai\NovaPermissions\ToolServiceProvider" --tag="seeds"
 ```
 
 
@@ -153,7 +153,7 @@ Now you can seed the Database. Add `$this->call(RolesAndPermissionsSeeder::class
 
 ### Create a Model Policy
 
-You can extend `Eminiarts\NovaPermissions\Policies\Policy` and have a very clean Model Policy that works with Nova.
+You can extend `Baleethai\NovaPermissions\Policies\Policy` and have a very clean Model Policy that works with Nova.
 
 For Example: Create a new Contact Policy with `php artisan make:policy ContactPolicy` with the following code:
 
@@ -161,7 +161,7 @@ For Example: Create a new Contact Policy with `php artisan make:policy ContactPo
 <?php
 namespace App\Policies;
 
-use Eminiarts\NovaPermissions\Policies\Policy;
+use Baleethai\NovaPermissions\Policies\Policy;
 
 class ContactPolicy extends Policy
 {
@@ -207,13 +207,13 @@ class User {
 
 ### Scope Resource for User
 
-If you use our Policy and Seeder, the user will still be able to see other Entries. In order to only **allow a User to view his own Entries** and no others, you can extens our `Eminiarts\NovaPermissions\Nova\ResourceForUser` Class like this:
+If you use our Policy and Seeder, the user will still be able to see other Entries. In order to only **allow a User to view his own Entries** and no others, you can extens our `Baleethai\NovaPermissions\Nova\ResourceForUser` Class like this:
 
 ```php
 <?php
 namespace App\Nova;
 
-use Eminiarts\NovaPermissions\Nova\ResourceForUser;
+use Baleethai\NovaPermissions\Nova\ResourceForUser;
 
 class Contact extends ResourceForUser 
 {
@@ -241,7 +241,7 @@ public function tools()
 {
     return [
         // ...
-        \Eminiarts\NovaPermissions\NovaPermissionTool::make()
+        \Baleethai\NovaPermissions\NovaPermissionTool::make()
             ->roleResource(Role::class)
             ->permissionResource(Permission::class),
     ];

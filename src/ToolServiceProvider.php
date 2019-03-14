@@ -1,5 +1,5 @@
 <?php
-namespace Eminiarts\NovaPermissions;
+namespace Baleethai\NovaPermissions;
 
 use Laravel\Nova\Nova;
 use Illuminate\Support\Collection;
@@ -7,7 +7,7 @@ use Laravel\Nova\Events\ServingNova;
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
-use Eminiarts\NovaPermissions\Http\Middleware\Authorize;
+use Baleethai\NovaPermissions\Http\Middleware\Authorize;
 
 class ToolServiceProvider extends ServiceProvider
 {

@@ -1,10 +1,10 @@
 <?php
-namespace Eminiarts\NovaPermissions;
+namespace Baleethai\NovaPermissions;
 
 use Laravel\Nova\Nova;
 use Laravel\Nova\Tool;
-use Eminiarts\NovaPermissions\Nova\Role;
-use Eminiarts\NovaPermissions\Nova\Permission;
+use Baleethai\NovaPermissions\Nova\Role;
+use Baleethai\NovaPermissions\Nova\Permission;
 
 class NovaPermissions extends Tool
 {

@@ -1,5 +1,5 @@
 <?php
-namespace Eminiarts\NovaPermissions\Nova;
+namespace Baleethai\NovaPermissions\Nova;
 
 use Laravel\Nova\Nova;
 use Laravel\Nova\Resource;
@@ -9,8 +9,8 @@ use Laravel\Nova\Fields\Text;
 use Illuminate\Validation\Rule;
 use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\MorphToMany;
-use Eminiarts\NovaPermissions\Checkboxes;
-use Eminiarts\NovaPermissions\Role as RoleModel;
+use Baleethai\NovaPermissions\Checkboxes;
+use Baleethai\NovaPermissions\Role as RoleModel;
 use Spatie\Permission\Models\Permission as SpatiePermission;
 
 class Role extends Resource

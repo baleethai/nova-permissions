@@ -1,5 +1,5 @@
 <?php
-namespace Eminiarts\NovaPermissions;
+namespace Baleethai\NovaPermissions;
 
 use Spatie\Permission\Models\Role as SpatieRole;
 

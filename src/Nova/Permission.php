@@ -1,5 +1,5 @@
 <?php
-namespace Eminiarts\NovaPermissions\Nova;
+namespace Baleethai\NovaPermissions\Nova;
 
 use Laravel\Nova\Nova;
 use Laravel\Nova\Resource;
@@ -10,7 +10,7 @@ use Illuminate\Validation\Rule;
 use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\MorphToMany;
 use Laravel\Nova\Fields\BelongsToMany;
-use Eminiarts\NovaPermissions\Nova\Role;
+use Baleethai\NovaPermissions\Nova\Role;
 use Spatie\Permission\Models\Permission as SpatiePermission;
 
 class Permission extends Resource
