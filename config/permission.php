@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'models'                          => [
+    'models' => [
         /*
          * When using the "HasPermissions" trait from this package, we need to know which
          * Eloquent model should be used to retrieve your permissions. Of course, it
@@ -19,21 +19,21 @@ return [
          * The model you want to use as a Role model needs to implement the
          * `Spatie\Permission\Contracts\Role` contract.
          */
-        'role'       => Baleethai\NovaPermissions\Role::class,
+        'role'       => Spatie\Permission\Models\Role::class,
     ],
-    'table_names'                     => [
+    'table_names' => [
         /*
          * When using the "HasRoles" trait from this package, we need to know which
          * table should be used to retrieve your roles. We have chosen a basic
          * default value but you may easily change it to any table you like.
          */
-        'roles'                 => 'roles',
+        'roles' => 'roles',
         /*
          * When using the "HasPermissions" trait from this package, we need to know which
          * table should be used to retrieve your permissions. We have chosen a basic
          * default value but you may easily change it to any table you like.
          */
-        'permissions'           => 'permissions',
+        'permissions' => 'permissions',
         /*
          * When using the "HasPermissions" trait from this package, we need to know which
          * table should be used to retrieve your models permissions. We have chosen a
@@ -45,13 +45,13 @@ return [
          * table should be used to retrieve your models roles. We have chosen a
          * basic default value but you may easily change it to any table you like.
          */
-        'model_has_roles'       => 'model_has_roles',
+        'model_has_roles' => 'model_has_roles',
         /*
          * When using the "HasRoles" trait from this package, we need to know which
          * table should be used to retrieve your roles permissions. We have chosen a
          * basic default value but you may easily change it to any table you like.
          */
-        'role_has_permissions'  => 'role_has_permissions',
+        'role_has_permissions' => 'role_has_permissions',
     ],
     'column_names'                    => [
         /*
