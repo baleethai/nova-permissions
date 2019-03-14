@@ -62,7 +62,8 @@ class NovaPermissions extends Tool
      */
     public function renderNavigation()
     {
-        return view('nova-permissions::navigation');
+        if (config('permission.displayInNovigation'))
+            return view('nova-permissions::navigation');
     }
 
     /**

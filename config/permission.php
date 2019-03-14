@@ -95,4 +95,5 @@ return [
          */
         'store'           => 'default',
     ],
+    'displayInNovigation' => false,
 ];
